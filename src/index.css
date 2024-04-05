@@ -1,13 +1,133 @@
-body {
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css);
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  text-decoration: none !important;
+  outline: none !important;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+ 
+    /* background: rgb(64, 61, 59); */
+ 
+  background: rgba(64, 61, 59, 0.386); 
+ 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(64, 61, 59, 0.8);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --gradient-yellow: #EBDDCA;
+  --accent-purple-light:#F4ECFB;
+  --accent-purple:#883DCF;
+   --accent-yellow-light:#ffd61d30;
+  --accent-yellow:#FFD71D;
+  --accent-orange-light:#FFF0EA;
+  --accent-orange:#F86624;
+  --accent-green-light:#E9FAF7;
+  --accent-green:#22CAAD;
+  --accent-red-light:#FEECEE;
+  --accent-red:#EB3D4D;
+  --accent-blue-light:#e5ecfb65; 
+  --accent-blue: #0240BC; 
+  --accent-blue-soft: #0240bcc9; 
+  --text: #1D1F2C;
+  --small-text: #667085;
+  --gray-light: #8F8F8F;
+  --small-static: #EFEFEF;
+  --black: #000;  
+ --yellow: #FFD71D;
+  --white:#ffffff;
+  --border:#b2b2b2;
+    --transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  --form-border:#E2E2E2;
+ --side-bar-text: rgba(0, 0, 0, 0.7);
+  --background:#F6F8FF;
+   --box-shadow:  rgba(0, 0, 0, 0.1);
+  /* --background:linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #F5F6F8; 
+  --box-shadow: 0 0 4px rgba(0, 0, 0, .05), 0 0 16px rgba(0, 0, 0, .05), 0 0 32px rgba(0, 0, 0, .05), 0 0 64px rgba(0, 0, 0, .05); */
+}
+ 
+
+body {
+  font-family: "Poppins", sans-serif !important; 
+  line-height: 1.3;
+    padding-left: 0px !important; 
+  background: #f6f6f6;
+  margin: 0; 
+  box-sizing: border-box !important; 
+}
+
+td {
+  white-space: nowrap !important;
+}
+
+Button {
+  white-space: nowrap !important;
+}
+
+textarea {
+  width: 100%;
+  border: 2px solid var(--border) !important;
+  border-radius: 5px;
+}
+input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 2px solid var(--border) !important;
+  border-radius: 5px;
+}
+
+
+ /* --- Other CSS Files --- */
+@import url(./page/css/bootstrap.css);  
+@import url(./page/css/Form.css);  
+@import url(./page/css/button.css);  
+@import url(./page/css/Header.css);  
+
+
+#page-wrapper {
+  display: grid !important;
+  position: relative;
+  height: 100dvh !important;
+  grid-template-columns: max-content 1fr !important;
+  grid-template-rows: 80px 1fr !important;
+  grid-template-areas:
+    "header header"
+    "main main"   
+}
+
+main {
+  grid-area: main !important;
+  padding: 2rem 10rem !important;
+  overflow-y: scroll!important; 
+}
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media screen and (max-width: 720px) {
+  main {
+    padding: 2rem 0.5rem !important; /* Adjust padding for smaller screens */
+  }
+
+  .page-title {
+    color: #6a707e;
+    font: 12px "Poppins";
+    font-weight: bold;
+}
 }
